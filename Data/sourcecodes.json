@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "68b6c414b1ffe4d1533338c2",
+    "name": "ZuneFVERS - Nền tảng ChatAI trực tuyến",
+    "price": 699000,
+    "discountPercent": 10,
+    "thumbnailImage": "68b6c414b1ffe4d153333872",
+    "videoPreview": [
+      "68b7908d6bb4ad0dbf321655"
+    ],
+    "videoTutorial": [
+      "68b7863d38dedfa50c0f238d",
+      "68b7863d38dedfa50c0f238e",
+      "68b7863d38dedfa50c0f238f",
+      "68b7863d38dedfa50c0f2390",
+      "68b7863d38dedfa50c0f2391"
+    ],
+    "imagePreview": [
+      "68b7884df36076c9c37261da",
+      "68b7884df36076c9c37261db",
+      "68b7884df36076c9c37261dc",
+      "68b7884df36076c9c37261dd",
+      "68b7884df36076c9c37261de",
+      "68b7884df36076c9c37261df",
+      "68b7884df36076c9c37261e0",
+      "68b7884df36076c9c37261e1",
+      "68b7884df36076c9c37261e2",
+      "68b7884df36076c9c37261e3",
+      "68b7884df36076c9c37261e4",
+      "68b7884df36076c9c37261e5",
+      "68b7884df36076c9c37261e6",
+      "68b7884df36076c9c37261e7",
+      "68b7884df36076c9c37261e8",
+      "68b7884df36076c9c37261e9",
+      "68b7884df36076c9c37261ea",
+      "68b7884df36076c9c37261eb",
+      "68b7884df36076c9c37261ec"
+    ],
+    "policy": [
+      "Bảo hành",
+      "Hoàn tiền",
+      "Hỗ trợ cài đặt",
+      "Hỗ trợ 24/7"
+    ],
+    "description": [
+      "ZuneFVERS là một nền tảng hội thoại AI tích hợp quản lý người dùng subscription và referral được xây dựng trên kiến trúc monorepo gồm Frontend (Next.js/React + TypeScript) và Backend (Node.js/Express + MongoDB)."
+    ],
+    "sourceCodeFile": "68b79707f454642c6cb983f3",
+    "slug": "zunefvers-nn-tng-chatai-trc-tuyn",
+    "isActive": true,
+    "downloadCount": 2,
+    "viewCount": 104,
+    "tags": [
+      "React"
+    ],
+    "category": [
+      {
+        "_id": "68b6b6cab1ffe4d153333733",
+        "name": "AI PROJECT",
+        "slug": "ai-project"
+      },
+      {
+        "_id": "68b6b6dab1ffe4d153333736",
+        "name": "Website",
+        "slug": "website"
+      }
+    ],
+    "createdBy": {
+      "_id": "68b808588a0ff47a919c604c",
+      "name": "Thắng Phạm",
+      "email": "winnieph13@gmail.com"
+    },
+    "createdAt": "2025-09-02T10:16:52.187Z",
+    "updatedAt": "2025-09-04T06:29:53.594Z",
+    "__v": 0,
+    "discountedPrice": 629100,
+    "id": "68b6c414b1ffe4d1533338c2"
+  }
+]

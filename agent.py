@@ -37,27 +37,42 @@ class RAGAgent:
         
         genai.configure(api_key=self.api_key)
         
-        # Try to use the latest model, fallback to alternatives if needed
+        # Prefer Gemini 2.x Flash-Lite models, with sensible fallbacks
         try:
-            self.model = GenerativeModel('gemini-1.5-flash')
-            print("Using model: gemini-1.5-flash")
-        except Exception as e:
-            print(f"Failed to load gemini-1.5-flash: {e}")
+            self.model = GenerativeModel('gemini-2.5-flash-lite')
+            print("Using model: gemini-2.5-flash-lite")
+        except Exception as e_25lite:
+            print(f"Failed to load gemini-2.5-flash-lite: {e_25lite}")
             try:
-                self.model = GenerativeModel('gemini-1.5-pro')
-                print("Using model: gemini-1.5-pro")
-            except Exception as e2:
-                print(f"Failed to load gemini-1.5-pro: {e2}")
-                # List available models for debugging
+                self.model = GenerativeModel('gemini-2.0-flash-lite')
+                print("Using model: gemini-2.0-flash-lite")
+            except Exception as e_20lite:
+                print(f"Failed to load gemini-2.0-flash-lite: {e_20lite}")
                 try:
-                    models = genai.list_models()
-                    print("Available models:")
-                    for model in models:
-                        if 'generateContent' in model.supported_generation_methods:
-                            print(f"  - {model.name}")
-                except Exception as e3:
-                    print(f"Could not list models: {e3}")
-                raise ValueError("No suitable Gemini model found")
+                    self.model = GenerativeModel('gemini-2.0-flash')
+                    print("Using model: gemini-2.0-flash")
+                except Exception as e_20flash:
+                    print(f"Failed to load gemini-2.0-flash: {e_20flash}")
+                    try:
+                        self.model = GenerativeModel('gemini-1.5-pro')
+                        print("Using model: gemini-1.5-pro")
+                    except Exception as e_pro:
+                        print(f"Failed to load gemini-1.5-pro: {e_pro}")
+                        try:
+                            self.model = GenerativeModel('gemini-1.5-flash')
+                            print("Using model: gemini-1.5-flash")
+                        except Exception as e_flash:
+                            print(f"Failed to load gemini-1.5-flash: {e_flash}")
+                            # List available models for debugging
+                            try:
+                                models = genai.list_models()
+                                print("Available models:")
+                                for model in models:
+                                    if 'generateContent' in model.supported_generation_methods:
+                                        print(f"  - {model.name}")
+                            except Exception as e_list:
+                                print(f"Could not list models: {e_list}")
+                            raise ValueError("No suitable Gemini model found")
         
         # Initialize sentence transformer for embeddings
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -88,17 +103,22 @@ class RAGAgent:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                 
-                # Extract text content from JSON structure
-                text_content = self.extract_text_from_json(data)
+                # Extract text content from JSON structure (robust for dicts/lists/primitives)
+                text_content = self.extract_text_from_json(data, source_name=filename)
                 
                 # Split into chunks for better retrieval
                 chunks = self.split_text_into_chunks(text_content, chunk_size=500)
                 
                 for i, chunk in enumerate(chunks):
-                    documents.append(chunk)
+                    # Include filename context directly in chunk for better grounding
+                    documents.append(f"Nguồn: {filename}\n{chunk}")
+                    # Safely infer a title if present
+                    inferred_title = ''
+                    if isinstance(data, dict):
+                        inferred_title = data.get('title') or data.get('name') or ''
                     metadatas.append({
                         "source": filename,
-                        "title": data.get('title', ''),
+                        "title": inferred_title,
                         "chunk_id": i
                     })
                     ids.append(f"{filename}_{i}")
@@ -113,86 +133,195 @@ class RAGAgent:
                 ids=ids
             )
     
-    def extract_text_from_json(self, data: Dict[str, Any]) -> str:
-        """Extract readable text from JSON structure"""
-        text_parts = []
-        
-        # Add title and description
-        if 'title' in data:
-            text_parts.append(f"Tiêu đề: {data['title']}")
-        if 'description' in data:
-            text_parts.append(f"Mô tả: {data['description']}")
-        if 'introduction' in data:
-            text_parts.append(f"Giới thiệu: {data['introduction']}")
-        
-        # Process sections
-        if 'sections' in data:
-            for section in data['sections']:
-                if 'title' in section:
-                    text_parts.append(f"\n{section['title']}")
-                
-                if 'content' in section:
-                    if isinstance(section['content'], list):
-                        for item in section['content']:
-                            if isinstance(item, str):
-                                text_parts.append(item)
-                            else:
-                                text_parts.append(str(item))
+    # --------------------------
+    # Structured data utilities
+    # --------------------------
+    def _load_json_file(self, filename: str) -> Any:
+        file_path = os.path.join("Data", filename)
+        if not os.path.exists(file_path):
+            return None
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            return None
+
+    def list_categories(self) -> str:
+        data = self._load_json_file('categories.json')
+        if not isinstance(data, list) or not data:
+            return "Tôi không tìm thấy danh mục nào trong cơ sở dữ liệu."
+        lines = ["Danh mục sản phẩm hiện có (nguồn: categories.json):"]
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            name = item.get('name') or ''
+            desc = item.get('description') or ''
+            slug = item.get('slug') or ''
+            if name:
+                bullet = f"- {name}"
+                details = []
+                if desc:
+                    details.append(desc)
+                if slug:
+                    details.append(f"slug: {slug}")
+                if details:
+                    bullet += f" — {'; '.join(details)}"
+                lines.append(bullet)
+        return "\n".join(lines)
+
+    def list_accounts(self) -> str:
+        data = self._load_json_file('accounts.json')
+        if not isinstance(data, list) or not data:
+            return "Tôi không tìm thấy danh sách tài khoản trong cơ sở dữ liệu."
+        lines = ["Danh sách tài khoản dịch vụ AI (nguồn: accounts.json):"]
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            if (str(item.get('productType', '')).lower() != 'account'):
+                continue
+            name = item.get('name') or ''
+            price = item.get('price')
+            duration = item.get('duration') or ''
+            category = item.get('category')
+            category_text = ", ".join(category) if isinstance(category, list) else (category or '')
+            parts = []
+            if name:
+                parts.append(name)
+            if price is not None:
+                parts.append(f"Giá: {price}")
+            if duration:
+                parts.append(f"Thời hạn: {duration}")
+            if category_text:
+                parts.append(f"Danh mục: {category_text}")
+            if parts:
+                lines.append("- " + " — ".join(parts))
+        if len(lines) == 1:
+            return "Tôi không tìm thấy mục tài khoản phù hợp trong cơ sở dữ liệu."
+        return "\n".join(lines)
+
+    def list_sourcecodes(self) -> str:
+        data = self._load_json_file('sourcecodes.json')
+        if not isinstance(data, list) or not data:
+            return "Tôi không tìm thấy danh sách sản phẩm mã nguồn trong cơ sở dữ liệu."
+        lines = ["Danh sách sản phẩm mã nguồn (nguồn: sourcecodes.json):"]
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            name = item.get('name') or ''
+            price = item.get('price')
+            discounted = item.get('discountedPrice')
+            tags = item.get('tags')
+            tags_text = ", ".join(tags) if isinstance(tags, list) else (tags or '')
+            categories = item.get('category')
+            if isinstance(categories, list):
+                cat_names = []
+                for c in categories:
+                    if isinstance(c, dict) and c.get('name'):
+                        cat_names.append(str(c.get('name')))
                     else:
-                        text_parts.append(str(section['content']))
-                
-                if 'subsections' in section:
-                    for sub_key, sub_value in section['subsections'].items():
-                        text_parts.append(f"\n{sub_key}:")
-                        if isinstance(sub_value, list):
-                            for item in sub_value:
-                                if isinstance(item, str):
-                                    text_parts.append(f"- {item}")
-                                else:
-                                    text_parts.append(f"- {str(item)}")
-                        elif isinstance(sub_value, dict):
-                            for k, v in sub_value.items():
-                                if isinstance(v, list):
-                                    text_parts.append(f"  {k}:")
-                                    for item in v:
-                                        text_parts.append(f"    - {str(item)}")
-                                else:
-                                    text_parts.append(f"  {k}: {str(v)}")
-                        else:
-                            text_parts.append(f"- {str(sub_value)}")
-                
-                # Handle other fields that might contain complex structures
-                for key, value in section.items():
-                    if key not in ['title', 'content', 'subsections']:
-                        if isinstance(value, dict):
-                            text_parts.append(f"\n{key}:")
-                            for k, v in value.items():
-                                if isinstance(v, list):
-                                    text_parts.append(f"  {k}:")
-                                    for item in v:
-                                        if isinstance(item, dict):
-                                            for item_k, item_v in item.items():
-                                                text_parts.append(f"    {item_k}: {str(item_v)}")
-                                        else:
-                                            text_parts.append(f"    - {str(item)}")
-                                elif isinstance(v, dict):
-                                    text_parts.append(f"  {k}:")
-                                    for item_k, item_v in v.items():
-                                        text_parts.append(f"    {item_k}: {str(item_v)}")
-                                else:
-                                    text_parts.append(f"  {k}: {str(v)}")
-                        elif isinstance(value, list):
-                            text_parts.append(f"\n{key}:")
-                            for item in value:
-                                if isinstance(item, dict):
-                                    for item_k, item_v in item.items():
-                                        text_parts.append(f"  {item_k}: {str(item_v)}")
-                                else:
-                                    text_parts.append(f"- {str(item)}")
-                        else:
-                            text_parts.append(f"{key}: {str(value)}")
-        
-        return "\n".join(text_parts)
+                        cat_names.append(str(c))
+                category_text = ", ".join(cat_names)
+            else:
+                category_text = str(categories) if categories is not None else ''
+            parts = []
+            if name:
+                parts.append(name)
+            if price is not None:
+                parts.append(f"Giá: {price}")
+            if discounted is not None:
+                parts.append(f"Giá KM: {discounted}")
+            if category_text:
+                parts.append(f"Danh mục: {category_text}")
+            if tags_text:
+                parts.append(f"Tags: {tags_text}")
+            if parts:
+                lines.append("- " + " — ".join(parts))
+        if len(lines) == 1:
+            return "Tôi không tìm thấy mục mã nguồn trong cơ sở dữ liệu."
+        return "\n".join(lines)
+    
+    def extract_text_from_json(self, data: Any, source_name: str = "") -> str:
+        """Recursively extract readable text from any JSON structure (dict, list, primitives)."""
+        lines: List[str] = []
+
+        def is_primitive(value: Any) -> bool:
+            return isinstance(value, (str, int, float, bool)) or value is None
+
+        def normalize_primitive(value: Any) -> str:
+            if value is None:
+                return "null"
+            return str(value)
+
+        def flatten(node: Any, path_parts: List[str]):
+            # If the node is a primitive, record it with its path
+            if is_primitive(node):
+                path_display = " / ".join(path_parts) if path_parts else "root"
+                value_text = normalize_primitive(node)
+                if value_text.strip() != "":
+                    lines.append(f"{path_display}: {value_text}")
+                return
+
+            # If the node is a list, recurse into each element
+            if isinstance(node, list):
+                for index, item in enumerate(node):
+                    flatten(item, path_parts + [str(index)])
+                return
+
+            # If the node is a dict, optionally add a concise product summary then recurse into each key
+            if isinstance(node, dict):
+                # Heuristic: product-like object
+                keys = set(node.keys())
+                has_name = 'name' in keys
+                has_type = 'productType' in keys
+                has_price = 'price' in keys
+                has_category = 'category' in keys
+                # Heuristic: identify source code objects
+                lower_source = source_name.lower() if source_name else ""
+                looks_like_source_code = (
+                    'sourcecode' in lower_source or
+                    'sourcecodes' in lower_source or
+                    'source_code' in lower_source or
+                    'sourceCodeFile' in keys
+                )
+                if has_name or has_type or has_price or has_category:
+                    name_text = str(node.get('name', '')).strip()
+                    type_text = str(node.get('productType', '')).strip()
+                    category_field = node.get('category')
+                    if isinstance(category_field, list):
+                        category_text = ", ".join([str(c) for c in category_field])
+                    else:
+                        category_text = str(category_field) if category_field is not None else ''
+                    price_value = node.get('price')
+                    price_text = '' if price_value is None else str(price_value)
+                    # Only emit summary if it looks meaningful
+                    if name_text or type_text or category_text or price_text:
+                        summary_parts = []
+                        if name_text:
+                            summary_parts.append(f"Tên: {name_text}")
+                        if type_text:
+                            # Map common types to Vietnamese-friendly labels
+                            vi_type = 'tài khoản' if type_text.lower() == 'account' else type_text
+                            summary_parts.append(f"Loại: {vi_type}")
+                        elif looks_like_source_code:
+                            summary_parts.append("Loại: mã nguồn (source code)")
+                        if category_text:
+                            summary_parts.append(f"Danh mục: {category_text}")
+                        if price_text:
+                            summary_parts.append(f"Giá: {price_text}")
+                        if summary_parts:
+                            lines.append("Sản phẩm: " + "; ".join(summary_parts))
+                            if looks_like_source_code:
+                                # Add common synonyms/keywords to aid retrieval
+                                lines.append("Từ khóa: mã nguồn; source code; codebase; dự án; template")
+                for key, value in node.items():
+                    flatten(value, path_parts + [str(key)])
+                return
+
+            # Fallback for unexpected types
+            lines.append(f"{' / '.join(path_parts) if path_parts else 'root'}: {str(node)}")
+
+        flatten(data, [])
+        return "\n".join(lines)
     
     def split_text_into_chunks(self, text: str, chunk_size: int = 500) -> List[str]:
         """Split text into smaller chunks for better retrieval"""
@@ -205,7 +334,7 @@ class RAGAgent:
         
         return chunks
     
-    def retrieve_relevant_documents(self, query: str, n_results: int = 3) -> List[Dict[str, Any]]:
+    def retrieve_relevant_documents(self, query: str, n_results: int = 8) -> List[Dict[str, Any]]:
         """Retrieve relevant documents from ChromaDB"""
         query_embedding = self.embedding_model.encode([query]).tolist()[0]
         
@@ -226,6 +355,15 @@ class RAGAgent:
     
     def generate_response(self, query: str) -> str:
         """Generate response using RAG pipeline"""
+        # Intent-aware shortcuts for structured listings
+        q = query.strip().lower()
+        if any(kw in q for kw in ["liệt kê danh mục", "danh mục sản phẩm", "danh mục", "categories", "list categories"]):
+            return self.list_categories()
+        if any(kw in q for kw in ["liệt kê tài khoản", "danh sách tài khoản", "tài khoản dịch vụ ai", "accounts", "list accounts"]):
+            return self.list_accounts()
+        if any(kw in q for kw in ["liệt kê mã nguồn", "danh sách mã nguồn", "source code", "sourcecode", "list source codes"]):
+            return self.list_sourcecodes()
+ 
         # Retrieve relevant documents
         relevant_docs = self.retrieve_relevant_documents(query)
         
@@ -240,7 +378,7 @@ class RAGAgent:
         
         # Create prompt for Gemini
         prompt = f"""
-Bạn là một trợ lý AI chuyên về chính sách và điều khoản của ZuneF.Com. 
+Bạn là một trợ lý AI của ZuneF.Com, hỗ trợ trả lời về chính sách, điều khoản, danh mục, sản phẩm (tài khoản, source code) và các thông tin liên quan khác. 
 Hãy trả lời câu hỏi của người dùng dựa trên thông tin được cung cấp bên dưới.
 
 THÔNG TIN THAM KHẢO:
@@ -252,7 +390,7 @@ HƯỚNG DẪN:
 - Chỉ trả lời dựa trên thông tin có trong tài liệu tham khảo
 - Nếu không có thông tin liên quan, hãy nói rõ "Tôi không tìm thấy thông tin về vấn đề này trong cơ sở dữ liệu"
 - Trả lời bằng tiếng Việt, rõ ràng và dễ hiểu
-- Nếu có thể, hãy trích dẫn nguồn tài liệu
+- Nếu có thể, hãy trích dẫn nguồn tài liệu (tên file)
 
 TRẢ LỜI:
 """

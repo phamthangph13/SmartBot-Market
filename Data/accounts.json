@@ -1,0 +1,291 @@
+[
+  {
+    "_id": "68b8426a8d291871cc399d25",
+    "name": "Trae IDE - 1 năm",
+    "price": 1499000,
+    "Discount": 20,
+    "stock": 100,
+    "duration": "1_year",
+    "category": [
+      "IDE",
+      "AGENT"
+    ],
+    "imagepreview": [
+      "68b842d08d291871cc399d58",
+      "68b842d08d291871cc399d5a"
+    ],
+    "videopreview": [
+      "68b842d08d291871cc399d5d",
+      "68b842d08d291871cc399d7a",
+      "68b842d08d291871cc399d82"
+    ],
+    "policy": [
+      "Bảo hành 1 năm",
+      "Dùng tài khoản cá nhân"
+    ],
+    "description": [
+      "Gói Trae IDE Pro — 1 tháng cung cấp trải nghiệm phát triển bằng AI toàn diện: từ tự động tạo dự án (Builder Mode) chat & gỡ lỗi (Chat Mode) đến truy cập các mô hình AI cao cấp (Claude 4 Gemini 2.5 Pro) với 600 truy vấn nhanh và hoàn toàn không giới hạn autocomplete."
+    ],
+    "productType": "account",
+    "createdAt": "2025-09-03T13:28:10.862Z",
+    "updatedAt": "2025-09-03T13:29:52.692Z",
+    "__v": 0,
+    "thumbnail": "68b842d08d291871cc399d56"
+  },
+  {
+    "_id": "68b563ebb1ffe4d1533332a6",
+    "name": "Netflix - 1 tháng",
+    "price": 79000,
+    "Discount": 10,
+    "stock": 100,
+    "duration": "1_month",
+    "category": [
+      "ENTERTAINMENT"
+    ],
+    "thumbnail": "68b56708b1ffe4d153333315",
+    "imagepreview": [
+      "68b566cfb1ffe4d1533332f5",
+      "68b566cfb1ffe4d1533332f9",
+      "68b566cfb1ffe4d1533332fb",
+      "68b566cfb1ffe4d1533332fe"
+    ],
+    "videopreview": [],
+    "policy": [
+      "Bảo hành 1 tháng",
+      "Dùng tài khoản riêng"
+    ],
+    "description": [
+      "Netflix là nền tảng xem phim và chương trình giải trí trực tuyến hàng đầu thế giới mang đến hàng ngàn bộ phim series show truyền hình và nội dung độc quyền (Netflix Originals). Người dùng có thể xem trên nhiều thiết bị như TV điện thoại máy tính bảng và laptop với chất lượng hình ảnh từ HD đến 4K tùy gói dịch vụ."
+    ],
+    "productType": "account",
+    "createdAt": "2025-09-01T09:14:19.662Z",
+    "updatedAt": "2025-09-01T09:27:36.061Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b56279b1ffe4d153333275",
+    "name": "SuperGrok - 1 tháng",
+    "price": 149000,
+    "Discount": 10,
+    "stock": 100,
+    "duration": "1_month",
+    "category": [
+      "AI ACCOUNT",
+      "AGENT"
+    ],
+    "thumbnail": "68b56279b1ffe4d15333326f",
+    "imagepreview": [
+      "68b56279b1ffe4d153333271",
+      "68b56279b1ffe4d153333273"
+    ],
+    "videopreview": [],
+    "policy": [
+      "Bảo hành 1 tháng",
+      "Dùng tài khoản cá nhân"
+    ],
+    "description": [
+      "Gói SuperGrok 1 tháng mang lại trải nghiệm AI hiện đại với tốc độ xử lý nhanh khả năng tư duy nâng cao và hỗ trợ đa dạng lĩnh vực như học tập công việc nghiên cứu và sáng tạo. Đây là lựa chọn linh hoạt chi phí hợp lý cho người dùng muốn trải nghiệm dịch vụ cao cấp trong ngắn hạn."
+    ],
+    "productType": "account",
+    "createdAt": "2025-09-01T09:08:09.973Z",
+    "updatedAt": "2025-09-01T09:15:28.493Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b55fd3b1ffe4d153333120",
+    "name": "Claude Pro - 1 tháng",
+    "price": 199000,
+    "Discount": 10,
+    "stock": 100,
+    "duration": "1_month",
+    "category": [
+      "AI ACCOUNT",
+      "AGENT"
+    ],
+    "thumbnail": "68b55fd3b1ffe4d15333311e",
+    "imagepreview": [
+      "68b56055b1ffe4d153333124",
+      "68b56055b1ffe4d153333126",
+      "68b56055b1ffe4d153333128"
+    ],
+    "videopreview": [],
+    "policy": [
+      "Bảo hành 1 tháng",
+      "Dùng tài khoản cá nhân"
+    ],
+    "description": [
+      "Gói Claude Pro 1 tháng mang đến trải nghiệm AI cao cấp với khả năng xử lý ngôn ngữ tự nhiên mạnh mẽ tốc độ phản hồi nhanh và độ chính xác cao. Đây là lựa chọn phù hợp cho học tập làm việc và sáng tạo nội dung trong ngắn hạn với chi phí linh hoạt."
+    ],
+    "productType": "account",
+    "createdAt": "2025-09-01T08:56:51.885Z",
+    "updatedAt": "2025-09-01T09:15:33.206Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b3bcdcb1ffe4d1533322ad",
+    "name": "Canvas Pro - 1 năm",
+    "price": 139000,
+    "Discount": 10,
+    "stock": 99,
+    "duration": "1_year",
+    "category": [
+      "AGENT",
+      "AI ACCOUNT"
+    ],
+    "thumbnail": "68b3bcdcb1ffe4d1533322a0",
+    "imagepreview": [
+      "68b3bcdcb1ffe4d1533322a3",
+      "68b3bcdcb1ffe4d1533322a7",
+      "68b3bcdcb1ffe4d1533322a9"
+    ],
+    "videopreview": [
+      "68b45a17b1ffe4d153332907",
+      "68b45a17b1ffe4d153332930",
+      "68b45a17b1ffe4d153332933"
+    ],
+    "policy": [
+      "Bảo hành 1 năm",
+      "Tài khoản cá nhân"
+    ],
+    "description": [
+      "Canvas Pro 1 năm mang đến trải nghiệm thiết kế chuyên nghiệp với đầy đủ tính năng nâng cao. Người dùng có thể sử dụng kho tài nguyên đồ họa khổng lồ công cụ chỉnh sửa mạnh mẽ xuất file chất lượng cao hỗ trợ nền trong suốt và nhiều tính năng thông minh giúp tiết kiệm thời gian. Đây là lựa chọn tối ưu cho cá nhân và doanh nghiệp muốn tạo ấn phẩm đẹp mắt chuyên nghiệp và nhanh chóng."
+    ],
+    "productType": "account",
+    "createdAt": "2025-08-31T03:09:16.273Z",
+    "updatedAt": "2025-08-31T14:20:07.819Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b30773b1ffe4d153331d79",
+    "name": "ChatGPT Plus - 3 tháng",
+    "price": 199000,
+    "Discount": 50,
+    "stock": 119,
+    "duration": "3_months",
+    "category": [
+      "AI ACCOUNT"
+    ],
+    "thumbnail": "68b307dbb1ffe4d153331d8f",
+    "imagepreview": [
+      "68b30773b1ffe4d153331d73",
+      "68b30773b1ffe4d153331d75",
+      "68b30773b1ffe4d153331d77"
+    ],
+    "videopreview": [
+      "68b45d2bb1ffe4d153332b4b",
+      "68b45d2bb1ffe4d153332bea"
+    ],
+    "policy": [
+      "Bảo hành 90 ngày",
+      "Tài khoản cá nhân"
+    ],
+    "description": [
+      "Gói ChatGPT Plus 3 tháng mang đến trải nghiệm AI cao cấp với tốc độ phản hồi nhanh hơn khả năng truy cập ngay cả khi nhu cầu cao và hiệu suất vượt trội từ phiên bản GPT-5. Đây là lựa chọn phù hợp cho học tập công việc và nghiên cứu trong ngắn hạn với chi phí hợp lý."
+    ],
+    "productType": "account",
+    "createdAt": "2025-08-30T14:15:15.883Z",
+    "updatedAt": "2025-08-31T14:33:15.853Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b301a9b1ffe4d153331d34",
+    "name": "Geimini Pro - 1 năm",
+    "price": 149000,
+    "Discount": 10,
+    "stock": 100,
+    "duration": "1_year",
+    "category": [
+      "AI ACCOUNT"
+    ],
+    "thumbnail": "68b30369b1ffe4d153331d53",
+    "imagepreview": [
+      "68b301a9b1ffe4d153331d2e",
+      "68b301a9b1ffe4d153331d30",
+      "68b301a9b1ffe4d153331d32"
+    ],
+    "videopreview": [
+      "68b45e16b1ffe4d153332cb3",
+      "68b45e17b1ffe4d153332ccc"
+    ],
+    "policy": [
+      "Bảo hành 1 năm",
+      "Tài khoản cá nhân"
+    ],
+    "description": [
+      "Gemini Pro là công cụ trí tuệ nhân tạo (AI) thế hệ mới do Google DeepMind phát triển dựa trên mô hình ngôn ngữ đa phương thức Gemini. Phiên bản mới nhất cho phép tương tác linh hoạt qua văn bản hình ảnh dữ liệu và mã lập trình giúp nâng cao trải nghiệm học tập công việc và sáng tạo."
+    ],
+    "productType": "account",
+    "createdAt": "2025-08-30T13:50:33.274Z",
+    "updatedAt": "2025-08-31T14:37:11.113Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b00a682f23bbf519091c31",
+    "name": "ChatGPT Plus - 1 tháng",
+    "price": 99000,
+    "Discount": 10,
+    "stock": 100,
+    "duration": "1_month",
+    "category": [
+      "AI ACCOUNT"
+    ],
+    "thumbnail": "68b00ae12f23bbf519091c79",
+    "imagepreview": [
+      "68b00a682f23bbf519091c2d",
+      "68b00a682f23bbf519091c2f"
+    ],
+    "videopreview": [
+      "68b45d46b1ffe4d153332bff",
+      "68b45d46b1ffe4d153332c9e"
+    ],
+    "policy": [
+      "Bảo hành 30 ngày",
+      "Tài khoản cá nhân"
+    ],
+    "description": [
+      "ChatGPT Plus là gói dịch vụ cao cấp do OpenAI cung cấp",
+      "dựa trên mô hình ngôn ngữ lớn GPT. Với gói Plus",
+      "người dùng được trải nghiệm phiên bản GPT-4o (đa phương thức: văn bản",
+      "hình ảnh",
+      "âm thanh và mã lập trình) cùng nhiều ưu đãi về hiệu năng và quyền truy cập."
+    ],
+    "productType": "account",
+    "createdAt": "2025-08-28T07:51:04.268Z",
+    "updatedAt": "2025-08-31T14:33:43.129Z",
+    "__v": 0
+  },
+  {
+    "_id": "68aed1d5d8150f0923946178",
+    "name": "Trae IDE - 1 tháng",
+    "price": 149000,
+    "Discount": 10,
+    "stock": 100,
+    "duration": "1_month",
+    "category": [
+      "IDE",
+      "AGENT"
+    ],
+    "thumbnail": "68b3bed1b1ffe4d1533323cd",
+    "imagepreview": [
+      "68b41943b1ffe4d15333277d",
+      "68b41943b1ffe4d15333277f"
+    ],
+    "videopreview": [
+      "68b45c38b1ffe4d153332ad9",
+      "68b45c38b1ffe4d153332b08",
+      "68b45c38b1ffe4d153332b25",
+      "68b45c38b1ffe4d153332b2d"
+    ],
+    "policy": [
+      "Bảo hành 30 ngày",
+      "Tài khoản cá nhân"
+    ],
+    "description": [
+      "Gói Trae IDE Pro — 1 tháng cung cấp trải nghiệm phát triển bằng AI toàn diện: từ tự động tạo dự án (Builder Mode) chat & gỡ lỗi (Chat Mode) đến truy cập các mô hình AI cao cấp (Claude 4 Gemini 2.5 Pro) với 600 truy vấn nhanh và hoàn toàn không giới hạn autocomplete."
+    ],
+    "productType": "account",
+    "createdAt": "2025-08-27T09:37:25.750Z",
+    "updatedAt": "2025-08-31T14:29:12.505Z",
+    "__v": 0
+  }
+]

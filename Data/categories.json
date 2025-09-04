@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "68b6b6dab1ffe4d153333736",
+    "name": "Website",
+    "description": "Dự án mã nguồn website",
+    "slug": "website",
+    "isActive": true,
+    "sortOrder": 0,
+    "createdAt": "2025-09-02T09:20:26.177Z",
+    "updatedAt": "2025-09-02T09:20:26.177Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b6b6cab1ffe4d153333733",
+    "name": "AI PROJECT",
+    "description": "Dự án mã nguồn tích hợp AI",
+    "slug": "ai-project",
+    "isActive": true,
+    "sortOrder": 0,
+    "createdAt": "2025-09-02T09:20:10.913Z",
+    "updatedAt": "2025-09-02T09:20:10.914Z",
+    "__v": 0
+  },
+  {
+    "_id": "68b5641bb1ffe4d1533332ab",
+    "name": "ENTERTAINMENT",
+    "description": "Các dịch vụ dùng để giải trí như nghe nhạc xem phim...",
+    "slug": "entertainment",
+    "isActive": true,
+    "sortOrder": 0,
+    "createdAt": "2025-09-01T09:15:07.405Z",
+    "updatedAt": "2025-09-01T09:16:14.297Z",
+    "__v": 0
+  },
+  {
+    "_id": "68aec8a2be5d29bff46d6c83",
+    "name": "IDE",
+    "description": "Công cụ hỗ trợ code cho lập trình viên",
+    "slug": "ide",
+    "isActive": true,
+    "sortOrder": 0,
+    "createdAt": "2025-08-27T08:58:10.056Z",
+    "updatedAt": "2025-08-27T08:58:10.057Z",
+    "__v": 0
+  },
+  {
+    "_id": "68aecf6fbe5d29bff46d7286",
+    "name": "AGENT",
+    "slug": "agent",
+    "isActive": true,
+    "sortOrder": 1,
+    "createdAt": "2025-08-27T09:27:11.909Z",
+    "updatedAt": "2025-08-27T09:27:33.891Z",
+    "__v": 0,
+    "description": "chương trình tự động thực hiện nhiệm vụ thay mặt người dùng hoặc hệ thống khác."
+  },
+  {
+    "_id": "68b009112f23bbf519091c19",
+    "name": "AI ACCOUNT",
+    "description": "Tài khoản AI hỗ trợ công việc với giá rẻ",
+    "slug": "ai-account",
+    "isActive": true,
+    "sortOrder": 3,
+    "createdAt": "2025-08-28T07:45:21.453Z",
+    "updatedAt": "2025-08-29T01:18:58.104Z",
+    "__v": 0
+  }
+]

@@ -1,0 +1,79 @@
+{
+    "title": "Chính sách bảo mật",
+    "description": "Chúng tôi cam kết bảo vệ thông tin cá nhân và quyền riêng tư của bạn",
+    "last_updated": "01/09/2025",
+    "introduction": "Chào mừng bạn đến với ZuneF.Com. Chúng tôi hiểu rằng thông tin cá nhân của bạn là quan trọng và cam kết bảo vệ quyền riêng tư của bạn. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi sử dụng dịch vụ của chúng tôi.",
+    "sections": [
+      {
+        "title": "1. Thông tin chúng tôi thu thập",
+        "subsections": {
+          "Thông tin cá nhân": [
+            "Tên, email, số điện thoại",
+            "Thông tin thanh toán (được mã hóa)",
+            "Địa chỉ giao hàng (nếu có)",
+            "Ảnh đại diện (tùy chọn)"
+          ],
+          "Thông tin kỹ thuật": [
+            "Địa chỉ IP và thông tin trình duyệt",
+            "Dữ liệu sử dụng website",
+            "Cookies và công nghệ tương tự",
+            "Lịch sử giao dịch"
+          ]
+        }
+      },
+      {
+        "title": "2. Cách chúng tôi sử dụng thông tin",
+        "subsections": {
+          "Cung cấp dịch vụ": "Xử lý đơn hàng, cung cấp sản phẩm số, hỗ trợ khách hàng",
+          "Cải thiện trải nghiệm": "Phân tích hành vi người dùng, tối ưu hóa giao diện và tính năng",
+          "Giao tiếp": "Gửi thông báo quan trọng, cập nhật dịch vụ, marketing (nếu đồng ý)",
+          "Bảo mật": "Phát hiện và ngăn chặn gian lận, bảo vệ tài khoản"
+        }
+      },
+      {
+        "title": "3. Bảo vệ thông tin",
+        "subsections": {
+          "Biện pháp kỹ thuật": [
+            "Mã hóa SSL/TLS cho tất cả dữ liệu",
+            "Bảo mật cơ sở dữ liệu với firewall",
+            "Xác thực đa yếu tố (2FA)",
+            "Sao lưu dữ liệu định kỳ"
+          ],
+          "Biện pháp quản lý": [
+            "Giới hạn quyền truy cập thông tin",
+            "Đào tạo nhân viên về bảo mật",
+            "Kiểm tra bảo mật định kỳ",
+            "Tuân thủ các tiêu chuẩn quốc tế"
+          ]
+        }
+      },
+      {
+        "title": "4. Chia sẻ thông tin",
+        "content": [
+          "Chúng tôi KHÔNG bán, cho thuê hoặc chia sẻ thông tin cá nhân của bạn với bên thứ ba, trừ các trường hợp sau:",
+          "Khi có sự đồng ý rõ ràng từ bạn",
+          "Để cung cấp dịch vụ (nhà cung cấp thanh toán, vận chuyển)",
+          "Khi được yêu cầu bởi cơ quan pháp luật",
+          "Để bảo vệ quyền lợi hợp pháp của chúng tôi"
+        ]
+      },
+      {
+        "title": "5. Quyền của bạn",
+        "subsections": {
+          "Quyền truy cập": "Xem và tải xuống thông tin cá nhân",
+          "Quyền chỉnh sửa": "Cập nhật thông tin không chính xác",
+          "Quyền xóa": "Yêu cầu xóa tài khoản và dữ liệu",
+          "Quyền từ chối": "Từ chối xử lý dữ liệu không cần thiết"
+        }
+      },
+      {
+        "title": "6. Cookies",
+        "content": "Chúng tôi sử dụng cookies để cải thiện trải nghiệm của bạn. Bạn có thể quản lý cookies trong cài đặt trình duyệt. Xem chi tiết tại Chính sách Cookies."
+      },
+      {
+        "title": "7. Thay đổi chính sách",
+        "content": "Chúng tôi có thể cập nhật chính sách này theo thời gian. Mọi thay đổi sẽ được thông báo qua email hoặc thông báo trên website. Việc tiếp tục sử dụng dịch vụ sau khi có thay đổi được coi là đồng ý với chính sách mới."
+      }
+    ]
+  }
+  

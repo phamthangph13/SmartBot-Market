@@ -1,0 +1,88 @@
+{
+  "title": "Điều khoản sử dụng",
+  "description": "Điều khoản và điều kiện sử dụng dịch vụ tại ZuneF.Com",
+  "last_updated": "01/09/2025",
+  "sections": [
+    {
+      "title": "1. Chấp nhận Điều khoản",
+      "content": "Bằng việc truy cập, đăng ký tài khoản, hoặc mua hàng tại ZuneF.Com, bạn xác nhận đã đọc, hiểu và đồng ý với các Điều khoản này, cũng như Chính sách Bảo mật và các quy định khác được công bố trên website."
+    },
+    {
+      "title": "2. Tài khoản và bảo mật",
+      "content": [
+        "Bạn chịu trách nhiệm bảo mật thông tin đăng nhập và mọi hoạt động phát sinh từ tài khoản của mình.",
+        "Thông tin cung cấp phải chính xác, đầy đủ và được cập nhật kịp thời.",
+        "Chúng tôi có quyền tạm khóa hoặc chấm dứt tài khoản nếu phát hiện hành vi vi phạm."
+      ]
+    },
+    {
+      "title": "3. Sản phẩm số và giấy phép sử dụng",
+      "subsections": {
+        "Sản phẩm cung cấp": [
+          "Tài khoản dịch vụ AI",
+          "Công cụ IDE",
+          "Source code",
+          "Tài liệu kỹ thuật"
+        ],
+        "Quyền sử dụng": [
+          "Sử dụng cá nhân",
+          "Không độc quyền",
+          "Không thể chuyển nhượng",
+          "Theo thỏa thuận văn bản"
+        ],
+        "Hành vi bị cấm": [
+          "Chia sẻ trái phép",
+          "Bán lại",
+          "Cho thuê",
+          "Phân phối lại"
+        ]
+      }
+    },
+    {
+      "title": "4. Thanh toán và hoàn tiền",
+      "subsections": {
+        "Giá cả": "Giá có thể thay đổi theo thời điểm; mức giá tại lúc thanh toán là mức giá áp dụng.",
+        "Hoàn tiền": "Đối với hàng số/dịch vụ kích hoạt ngay, chính sách hoàn tiền có thể bị hạn chế. Xem chi tiết tại Chính sách hoàn tiền.",
+        "Hỗ trợ": "Nếu giao dịch bị lỗi do phía chúng tôi, bạn sẽ được hỗ trợ xử lý hoặc hoàn tiền theo quy định."
+      }
+    },
+    {
+      "title": "5. Quyền sở hữu trí tuệ",
+      "content": [
+        "Toàn bộ nội dung trên ZuneF.Com (thương hiệu, logo, hình ảnh, mã nguồn, tài liệu) thuộc quyền sở hữu của ZuneF hoặc bên cấp phép.",
+        "Bạn không được sao chép, chỉnh sửa, phân phối khi chưa có sự đồng ý bằng văn bản."
+      ]
+    },
+    {
+      "title": "6. Hành vi bị cấm",
+      "subsections": {
+        "Gian lận & Lạm dụng": [
+          "Gian lận, lạm dụng hệ thống",
+          "Phá hoại hoặc can thiệp trái phép",
+          "Tấn công mạng"
+        ],
+        "Vi phạm pháp luật": [
+          "Vi phạm bản quyền",
+          "Vi phạm điều khoản dịch vụ",
+          "Vi phạm pháp luật hiện hành"
+        ],
+        "Tự động hóa": [
+          "Sử dụng bot trái phép",
+          "Automation không được phép",
+          "Ảnh hưởng tính ổn định"
+        ]
+      }
+    },
+    {
+      "title": "7. Giới hạn trách nhiệm",
+      "content": [
+        "Trong phạm vi tối đa được pháp luật cho phép, chúng tôi không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt hoặc hậu quả phát sinh từ việc sử dụng dịch vụ.",
+        "Trách nhiệm tổng tối đa của chúng tôi, nếu có, sẽ không vượt quá số tiền bạn đã thanh toán cho giao dịch liên quan."
+      ]
+    },
+    {
+      "title": "8. Thay đổi Điều khoản",
+      "content": "Chúng tôi có thể cập nhật Điều khoản theo thời gian để phản ánh thay đổi về sản phẩm, quy định pháp lý hoặc hoạt động. Phiên bản cập nhật sẽ được công bố tại trang này và có hiệu lực kể từ ngày đăng."
+    }
+  ]
+}

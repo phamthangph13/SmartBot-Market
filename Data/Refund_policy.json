@@ -1,0 +1,115 @@
+{
+    "title": "Chính sách hoàn tiền",
+    "description": "Cam kết đảm bảo quyền lợi khách hàng với chính sách hoàn tiền minh bạch",
+    "last_updated": "01/09/2025",
+    "introduction": "Tại ZuneF.Com, chúng tôi cam kết mang đến trải nghiệm mua sắm tốt nhất cho khách hàng. Chính sách hoàn tiền này được thiết kế để bảo vệ quyền lợi của bạn và đảm bảo sự hài lòng.",
+    "overview": {
+      "Thời gian xử lý": "3-7 ngày làm việc",
+      "Bảo vệ khách hàng": "100% an toàn",
+      "Hoàn tiền nhanh": "Đa dạng phương thức"
+    },
+    "sections": [
+      {
+        "title": "1. Điều kiện hoàn tiền",
+        "conditions": {
+          "Sản phẩm số chưa sử dụng": [
+            "Tài khoản AI chưa được kích hoạt",
+            "Source code chưa được tải xuống",
+            "License IDE chưa được sử dụng",
+            "Yêu cầu hoàn tiền trong vòng 24 giờ"
+          ],
+          "Lỗi từ phía chúng tôi": [
+            "Sản phẩm không đúng mô tả",
+            "Lỗi kỹ thuật không thể sửa chữa",
+            "Giao hàng sai sản phẩm",
+            "Sản phẩm bị lỗi hoặc không hoạt động"
+          ],
+          "Trường hợp đặc biệt": [
+            "Thanh toán trùng lặp do lỗi hệ thống",
+            "Giao dịch không được xác nhận",
+            "Sản phẩm bị thu hồi bởi nhà cung cấp",
+            "Thay đổi chính sách dịch vụ"
+          ]
+        }
+      },
+      {
+        "title": "2. Trường hợp không hoàn tiền",
+        "conditions": {
+          "Sản phẩm đã sử dụng": [
+            "Tài khoản AI đã được kích hoạt",
+            "Source code đã tải xuống",
+            "License đã được sử dụng",
+            "Đã nhận được lợi ích từ sản phẩm"
+          ],
+          "Vi phạm điều khoản": [
+            "Chia sẻ tài khoản trái phép",
+            "Sử dụng cho mục đích thương mại",
+            "Vi phạm bản quyền",
+            "Hành vi gian lận"
+          ]
+        }
+      },
+      {
+        "title": "3. Quy trình hoàn tiền",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Gửi yêu cầu",
+            "description": "Liên hệ qua email hoặc hotline với thông tin đơn hàng"
+          },
+          {
+            "step": 2,
+            "title": "Xác minh thông tin",
+            "description": "Chúng tôi sẽ kiểm tra và xác minh thông tin đơn hàng"
+          },
+          {
+            "step": 3,
+            "title": "Xử lý hoàn tiền",
+            "description": "Hoàn tiền qua phương thức thanh toán ban đầu"
+          },
+          {
+            "step": 4,
+            "title": "Thông báo kết quả",
+            "description": "Gửi email xác nhận hoàn tiền thành công"
+          }
+        ]
+      },
+      {
+        "title": "4. Thời gian xử lý",
+        "processing_times": {
+          "Xác minh thông tin": "1-2 ngày",
+          "Xử lý hoàn tiền": "1-3 ngày",
+          "Nhận tiền hoàn": "3-7 ngày"
+        },
+        "phương_thức_thanh_toán": {
+          "Thẻ ngân hàng": "3-5 ngày",
+          "Ví điện tử": "1-3 ngày",
+          "Chuyển khoản": "1-2 ngày"
+        }
+      },
+      {
+        "title": "5. Phí hoàn tiền",
+        "phí_miễn": [
+          "Lỗi từ phía chúng tôi",
+          "Sản phẩm không đúng mô tả",
+          "Lỗi kỹ thuật không thể sửa",
+          "Thanh toán trùng lặp"
+        ],
+        "phí_phát_sinh": {
+          "Thay đổi ý định": "5%",
+          "Hoàn tiền quốc tế": "3%",
+          "Xử lý ngoài giờ": "2%",
+          "Yêu cầu đặc biệt": "Theo thỏa thuận"
+        }
+      },
+      {
+        "title": "6. Lưu ý quan trọng",
+        "notes": {
+          "Thời gian yêu cầu": "Yêu cầu hoàn tiền phải được gửi trong vòng 24 giờ kể từ khi mua hàng (đối với sản phẩm chưa sử dụng).",
+          "Bảo mật thông tin": "Chúng tôi cam kết bảo mật thông tin cá nhân và giao dịch của bạn. Mọi yêu cầu hoàn tiền đều được xử lý an toàn và bảo mật.",
+          "Cam kết chất lượng": "Chúng tôi luôn nỗ lực cung cấp sản phẩm chất lượng cao. Nếu bạn không hài lòng, chúng tôi sẽ hỗ trợ tối đa."
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,111 @@
+{
+    "title": "Chính sách Cookies",
+    "description": "Tìm hiểu cách chúng tôi sử dụng cookies để cải thiện trải nghiệm của bạn",
+    "last_updated": "01/09/2025",
+    "introduction": "Cookies là các tệp văn bản nhỏ được lưu trữ trên thiết bị của bạn khi bạn truy cập website. Chúng giúp chúng tôi cung cấp trải nghiệm tốt hơn và hiểu cách bạn sử dụng dịch vụ của chúng tôi.",
+    "sections": [
+      {
+        "title": "1. Cookies là gì?",
+        "description": "Cookies là các tệp dữ liệu nhỏ được gửi từ website và lưu trữ trên trình duyệt hoặc thiết bị của bạn. Chúng cho phép website nhận biết thiết bị của bạn và lưu trữ một số thông tin về sở thích hoặc hành động trước đó.",
+        "types": {
+          "Cookies phiên (Session)": "Tạm thời, tự động xóa khi đóng trình duyệt",
+          "Cookies lâu dài (Persistent)": "Lưu trữ lâu hơn, có thời hạn cụ thể"
+        }
+      },
+      {
+        "title": "2. Loại cookies chúng tôi sử dụng",
+        "types": {
+          "Cookies thiết yếu": [
+            "Xác thực người dùng và bảo mật",
+            "Lưu trữ giỏ hàng",
+            "Ghi nhớ tùy chọn ngôn ngữ",
+            "Bảo vệ chống tấn công CSRF"
+          ],
+          "Cookies phân tích": [
+            "Google Analytics",
+            "Thống kê lượt truy cập",
+            "Phân tích hành vi người dùng",
+            "Đo lường hiệu suất website"
+          ],
+          "Cookies quảng cáo": [
+            "Quảng cáo được cá nhân hóa",
+            "Theo dõi hiệu quả quảng cáo",
+            "Ngăn chặn quảng cáo trùng lặp",
+            "Tối ưu hóa chiến dịch marketing"
+          ],
+          "Cookies chức năng": [
+            "Ghi nhớ tùy chọn cá nhân",
+            "Lưu trữ cài đặt giao diện",
+            "Tự động điền form",
+            "Cải thiện trải nghiệm người dùng với các tính năng tùy chỉnh"
+          ]
+        }
+      },
+      {
+        "title": "3. Cookies của bên thứ ba",
+        "description": "Chúng tôi có thể sử dụng các dịch vụ của bên thứ ba để cải thiện trải nghiệm của bạn:",
+        "third_parties": [
+          {
+            "name": "Google Analytics",
+            "purpose": "Phân tích lưu lượng truy cập",
+            "policy": "Google Privacy Policy"
+          },
+          {
+            "name": "Google reCAPTCHA",
+            "purpose": "Bảo vệ chống spam",
+            "policy": "Google Privacy Policy"
+          },
+          {
+            "name": "Payment Gateways",
+            "purpose": "Xử lý thanh toán an toàn",
+            "compliance": "PCI DSS Compliant"
+          },
+          {
+            "name": "Social Media",
+            "purpose": "Tích hợp mạng xã hội",
+            "services": ["Facebook", "Twitter", "LinkedIn"]
+          }
+        ]
+      },
+      {
+        "title": "4. Quản lý cookies",
+        "methods": {
+          "Cài đặt trình duyệt": {
+            "Chrome": "Cài đặt → Bảo mật → Cookies",
+            "Firefox": "Tùy chọn → Riêng tư → Cookies",
+            "Safari": "Tùy chọn → Riêng tư → Cookies",
+            "Edge": "Cài đặt → Cookies và quyền trang web"
+          },
+          "Tùy chọn khác": [
+            "Sử dụng chế độ riêng tư/ẩn danh",
+            "Cài đặt tiện ích chặn quảng cáo",
+            "Xóa cookies định kỳ",
+            "Từ chối cookies không thiết yếu"
+          ],
+          "Lưu ý": "Tắt cookies có thể ảnh hưởng đến chức năng của website. Một số tính năng có thể không hoạt động bình thường."
+        }
+      },
+      {
+        "title": "5. Thời gian lưu trữ",
+        "storage_durations": {
+          "Cookies phiên": {
+            "thời_gian": 0,
+            "đơn_vị": "Tự động xóa khi đóng trình duyệt"
+          },
+          "Cookies chức năng": {
+            "thời_gian": 30,
+            "đơn_vị": "ngày"
+          },
+          "Cookies phân tích": {
+            "thời_gian": 2,
+            "đơn_vị": "năm"
+          }
+        }
+      },
+      {
+        "title": "6. Cập nhật chính sách",
+        "content": "Chúng tôi có thể cập nhật chính sách cookies này theo thời gian để phản ánh những thay đổi trong cách chúng tôi sử dụng cookies hoặc vì lý do pháp lý, vận hành hoặc các lý do khác. Mọi thay đổi sẽ được thông báo trên trang này."
+      }
+    ]
+  }
+  
